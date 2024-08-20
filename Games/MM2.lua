@@ -1,5 +1,3 @@
-
-
 UserInputService.InputBegan:Connect(function(Input, GPE)
     if Input.KeyCode == Enum.KeyCode.LeftShift and Sp then
         VG.IsA(Player.Character, "Humanoid").WalkSpeed = 25
@@ -200,9 +198,9 @@ Stepped:Connect(function()
         ForceTrade(Players[Person])
     end
 end)
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/Main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "V.G Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
@@ -358,7 +356,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "V.G Hub",
+    Title = "CkM Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
