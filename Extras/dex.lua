@@ -1455,7 +1455,7 @@ PluginsHint.Position = UDim2.new(0, 25, 0, 40)
 PluginsHint.Size = UDim2.new(0, 200, 0, 50)
 PluginsHint.Font = Enum.Font.SourceSansItalic
 PluginsHint.TextSize = 16
-PluginsHint.Text = "Download plugins from the IY Discord (discord.gg/78ZuWSq)"
+PluginsHint.Text = ""
 PluginsHint.TextColor3 = Color3.new(1, 1, 1)
 PluginsHint.TextStrokeColor3 = Color3.new(1, 1, 1)
 PluginsHint.TextWrapped = true
@@ -2763,7 +2763,7 @@ reference = (function()
 		{113,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=4,Name="Header",Parent={112},Position=UDim2.new(0,8,0,5),Size=UDim2.new(1,-8,0,20),Text="Get Further Help",TextColor3=Color3.new(1,1,1),TextSize=20,TextXAlignment=0,ZIndex=10,}},
 		{114,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=3,Name="Text",Parent={112},Position=UDim2.new(0,8,0,30),Size=UDim2.new(1,-8,0,32),Text="You can join the Discord server to get support with IY,  and read up on more documentation such as the Plugin API.",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,ZIndex=10,}},
 		{115,"Frame",{BackgroundColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),BorderSizePixel=0,Name="Line",Parent={112},Position=UDim2.new(0,10,1,-1),Size=UDim2.new(1,-20,0,1),Visible=false,ZIndex=10,}},
-		{116,"TextButton",{BackgroundColor3=Color3.new(0.48627451062202,0.61960786581039,0.85098040103912),BorderColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),Font=4,Name="InviteButton",Parent={112},Position=UDim2.new(0,5,0,75),Size=UDim2.new(1,-10,0,25),Text="Copy Discord Invite Link (https://discord.gg/78ZuWSq)",TextColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),TextSize=16,ZIndex=10,}},
+		{116,"TextButton",{BackgroundColor3=Color3.new(0.48627451062202,0.61960786581039,0.85098040103912),BorderColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),Font=4,Name="InviteButton",Parent={112},Position=UDim2.new(0,5,0,75),Size=UDim2.new(1,-10,0,25),Text="",TextColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),TextSize=16,ZIndex=10,}},
 	})
 	for i,v in pairs(main.Content.List:GetDescendants()) do
 		if v:IsA("TextLabel") then
@@ -2781,7 +2781,7 @@ reference = (function()
 	local lastPress = nil
 	inviteButton.MouseButton1Click:Connect(function()
 		if everyClipboard then
-			toClipboard("https://discord.gg/78ZuWSq")
+			toClipboard("")
 			inviteButton.Text = "Copied"
 		else
 			inviteButton.Text = "No Clipboard Function, type out the link"
@@ -2790,7 +2790,7 @@ reference = (function()
 		lastPress = pressTime
 		wait(2)
 		if lastPress ~= pressTime then return end
-		inviteButton.Text = "Copy Discord Invite Link (https://discord.gg/78ZuWSq)"
+		inviteButton.Text = ""
 	end)
 	dragGUI(main)
 	main.Parent = PARENT
@@ -6268,7 +6268,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/infinityyield.lua'))()")
 	end
 end)
 
@@ -6315,14 +6315,14 @@ end)
 
 addcmd('discord', {'support', 'help'}, function(args, speaker)
 	if everyClipboard then
-		toClipboard('https://discord.com/invite/dYHag43eeU')
-		notify('Discord Invite', 'Copied to clipboard!\ndiscord.gg/dYHag43eeU')
+		toClipboard('')
+		notify('')
 	else
-		notify('Discord Invite', 'discord.gg/dYHag43eeU')
+		notify('')
 	end
 	if httprequest then
 		httprequest({
-			Url = 'http://127.0.0.1:6463/rpc?v=1',
+			Url = '',
 			Method = 'POST',
 			Headers = {
 				['Content-Type'] = 'application/json',
@@ -6331,7 +6331,7 @@ addcmd('discord', {'support', 'help'}, function(args, speaker)
 			Body = HttpService:JSONEncode({
 				cmd = 'INVITE_BROWSER',
 				nonce = HttpService:GenerateGUID(false),
-				args = {code = 'dYHag43eeU'}
+				args = {code = ''}
 			})
 		})
 	end
@@ -8578,7 +8578,7 @@ addcmd("promptr15", {}, function(args, speaker)
 end)
 
 addcmd("wallwalk", {"walkonwalls"}, function(args, speaker)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/wallwalker.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/wallwalker.lua"))()
 end)
 
 addcmd('age',{},function(args, speaker)
@@ -10122,7 +10122,7 @@ addcmd('console',{},function(args, speaker)
 	-- Thanks wally!!
 	notify("Loading",'Hold on a sec')
 	local _, str = pcall(function()
-		return game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/console.lua", true)
+		return game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/console.lua", true)
 	end)
 
 	local s, e = loadstring(str)
@@ -10144,7 +10144,7 @@ end)
 
 addcmd('explorer', {'dex'}, function(args, speaker)
 	notify('Loading', 'Hold on a sec')
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/dex.lua"))()
 end)
 
 addcmd('olddex', {'odex'}, function(args, speaker)
@@ -10231,12 +10231,12 @@ addcmd('remotespy',{'rspy'},function(args, speaker)
 	notify("Loading",'Hold on a sec')
 	-- Full credit to exx, creator of SimpleSpy
 	-- also thanks to NoobSploit for fixing
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/simplespy/main.lua"))()
 end)
 
 addcmd('audiologger',{'alogger'},function(args, speaker)
 	notify("Loading",'Hold on a sec')
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/audiologger.lua'),true))()
 end)
 
 local loopgoto = nil
@@ -12540,7 +12540,7 @@ IYMouse.Move:Connect(checkTT)
 
 task.spawn(function()
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version')
+		local versionJson = game:HttpGet('https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/Version.json')
 		return HttpService:JSONDecode(versionJson)
 	end)
 
