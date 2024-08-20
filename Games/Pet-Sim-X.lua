@@ -1,6 +1,5 @@
-
 local Config = {
-    WindowName = "V.G Hub",
+    WindowName = "CkM Hub",
 	Color = Color3.fromRGB(255,128,64),
 	Keybind = Enum.KeyCode.RightControl
 }
