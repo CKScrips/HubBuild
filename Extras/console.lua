@@ -2337,7 +2337,6 @@ local function DeveloperConsoleVisible(visible)
 	end
 end
 
--- BetterConsole.lua by Josh#0903
 local InputService  = game:GetService'UserInputService'
 local StarterGui    = game:GetService'StarterGui'
 
