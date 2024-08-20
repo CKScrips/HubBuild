@@ -223,7 +223,7 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "CkM Hub Loaded",
-        Content = "Congrats your using V.G Hub " .. Verison,
+        Content = "Congrats your using CkM Hub " .. Verison,
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
