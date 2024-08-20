@@ -152,8 +152,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/C
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "V.G Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
-    SubTitle = "by DekuDimz",
+    Title = "CkM Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
+    SubTitle = "by CkMScripts",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -171,8 +171,8 @@ local Options = Fluent.Options
 
 do
     Fluent:Notify({
-        Title = "V.G Hub Loaded",
-        Content = "Congrats your using V.G Hub " .. Verison,
+        Title = "CkM Hub Loaded",
+        Content = "Congrats your using CkM Hub " .. Verison,
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
