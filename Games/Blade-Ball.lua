@@ -230,7 +230,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "HubBuild",
+    Title = "CkM Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
