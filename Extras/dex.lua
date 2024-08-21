@@ -4255,7 +4255,7 @@ local function main()
 		dumpbtn.MouseButton1Click:Connect(function()
 			if PreviousScr ~= nil then
 				pcall(function()
-                    -- thanks King.Kevin#6025 you'll obviously be credited (no discord tag since that can easily be impersonated)
+                    
                     local getgc = getgc or get_gc_objects
                     local getupvalues = (debug and debug.getupvalues) or getupvalues or getupvals
                     local getconstants = (debug and debug.getconstants) or getconstants or getconsts
@@ -10574,7 +10574,7 @@ Main = (function()
 					Main.DepsVersionData[1] = ""
 				end
 			end
-			rawXML = rawXML or game:HttpGet("https://raw.githubusercontent.com/CloneTrooper1019/Roblox-Client-Tracker/roblox/ReflectionMetadata.xml")
+			rawXML = rawXML or game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/reflectionmetadata.xml")
 		else
 			if script:FindFirstChild("RMD") then
 				rawXML = require(script.RMD)
