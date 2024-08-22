@@ -1,8 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/Global"))()
-VG.DisableConnection(Error)
-VG.DisableConnection(Idled)
- 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/Global"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Extras/Global.lua"))()
 VG.DisableConnection(Error)
 VG.DisableConnection(Idled)
 repeat wait() until Player.PlayerGui:FindFirstChild("PlayButton",true)
@@ -336,55 +332,6 @@ local NoCliper = function()
     return Player.Character
 end
  
-local IsStarted = function()
-    local InGame,NotGame = Workspace.Interiors:FindFirstChild("TileSkipMinigame", true), Workspace.Interiors:FindFirstChild("TileSkipMinigameLobby", true)
-    if InGame and InGame.Minigame:FindFirstChild("GoalPart") and not NotGame then
-        Player.Character.HumanoidRootPart.CFrame = InGame.Minigame:FindFirstChild("GoalPart").CFrame
-    elseif not InGame and NotGame then
-        Player.Character.HumanoidRootPart.CFrame = Workspace.Interiors.TileSkipMinigameLobby.JoinZone.EmitterPart.CFrame
-    elseif not InGame or not NotGame then
-        GoToStore("TileSkipMinigameLobby")
-        Player.Character.HumanoidRootPart.CFrame = Workspace.Interiors.TileSkipMinigameLobby.JoinZone.EmitterPart.CFrame
-    end
-end
- 
-local Ingame = function()
-    local Lunar2024Shop = Workspace.Interiors:FindFirstChild("Lunar2024Shop")
-    if Lunar2024Shop then
-        if Lunar2024Shop:FindFirstChild("RedLightGreenLight") and Lunar2024Shop.RedLightGreenLight.JoinZone.Billboard.BillboardGui.TimerLabel.Text:find("GAME IN PROGRESS") then
-            return true
-        else
-            return false
-        end
-    end
-end
- 
-local Dothings = function()
-    local Throwables = Workspace.Interiors.Lunar2024Shop.Arena:FindFirstChild("Throwables")
- 
-    if not Ingame() then
-        VG.Teleport(Workspace.Interiors.Lunar2024Shop.RedLightGreenLight.JoinZone.Collider.Position)
-    end
-    if Ingame() then
-        for i,v in next, Throwables:GetChildren() do
-            if v:IsA("Model") then
-                VG.Teleport(v:GetModelCFrame().Position)
-                wait(.3)
-                Count = Count + 1
-                print(Count)
-                if Count > 3 then
-                    break
-                end
-            end
-        end
-        if Count >= 3 then
-            VG.Teleport(Workspace.Interiors.Lunar2024Shop.Arena.SafeZones:FindFirstChildWhichIsA("BasePart").Position)
-            wait(2)
-            Count = 0
-        end
-    end
-end
- 
 local Neons = {}
 local AilmentFurnitues = {}
 local Neon = {}
@@ -571,23 +518,12 @@ local Options = Fluent.Options
  
 do
     Fluent:Notify({
-        Title = "V.G Hub Loaded",
-        Content = "Congrats your using V.G Hub " .. Verison,
-        SubContent = "", -- Optional
+        Title = "CkM Hub",
+        Content = "Congrats, you're using CkM Hub " .. Verison,
+        SubContent = "Have fun!", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
  
-    local Toggle = Tabs.Main:AddToggle("v3", {Title = "RedLightGreenLight Minigame", Default = false})
-    Toggle:OnChanged(function()
-        Toggle = Options.v3.Value
-        spawn(function()
-            while Toggle and wait() do
-                pcall(function()
-                    Dothings()
-                end)
-            end
-        end)
-    end)
     local Toggle = Tabs.Main:AddToggle("no", {Title = "Baby Farm", Default = false})
     Toggle:OnChanged(function()
         BabyFarm = Options.no.Value
@@ -816,7 +752,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("DekuDimz")
+    Dropdown:SetValue("CkM")
  
     Dropdown:OnChanged(function(Value)
         Petsc = Value
@@ -858,7 +794,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("DekuDimz")
+    Dropdown:SetValue("CkM")
  
     Dropdown:OnChanged(function(Value)
         Egg = Value
@@ -882,7 +818,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("DekuDimz")
+    Dropdown:SetValue("CkM")
  
     Dropdown:OnChanged(function(Value)
         Gift = Value
@@ -1023,7 +959,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("DekuDimz")
+    Dropdown:SetValue("CkM")
  
     Dropdown:OnChanged(function(Value)
         Playt = Value
@@ -1087,7 +1023,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
  
 Fluent:Notify({
-    Title = "V.G Hub",
+    Title = "CkM Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
