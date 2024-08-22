@@ -212,7 +212,7 @@ end
 
 VG.PlayersTable = function()
     local Ta = {}
-    for i,v in next, Players:GetPlayers() do -- why the fuck do i have to do this for dropdowns
+    for i,v in next, Players:GetPlayers() do 
         if not table.find(Ta, v.Name) and v ~= Player then
             table.insert(Ta, v.Name)
         end
