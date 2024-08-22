@@ -535,7 +535,7 @@ VG.WayPoints = function(RootPart ,Position, Table)
 end
 
 VG.IY = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Extras/infinityyield.lua"))()
 end
 --- Infinite Yeild for developing like dex and respy 
 
