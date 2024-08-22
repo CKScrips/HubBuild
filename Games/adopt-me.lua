@@ -494,13 +494,13 @@ local a = {
 }
  
  
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/Main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
  
 local Window = Fluent:CreateWindow({
-    Title = "V.G Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
-    SubTitle = "by DekuDimz",
+    Title = "CkM Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
+    SubTitle = "",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
