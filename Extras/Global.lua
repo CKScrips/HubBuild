@@ -23,7 +23,7 @@ GetGlobal.Settings = {}
 GetGlobal.Verison = "v1"
 GetGlobal.VG = {}
 GetGlobal.IsVG = false
-GetGlobal.Owner = "CkM"
+GetGlobal.Owner = "CKScrips"
 GetGlobal.Helper = "kk"
 GetGlobal.User = Instance.new("VirtualInputManager")
 GetGlobal.AFK = false
@@ -536,8 +536,7 @@ end
 
 VG.IY = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Extras/infinityyield.lua"))()
-end
---- Infinite Yeild for developing like dex and respy 
+end 
 
 VG.FireFunction = function(Signal)
     if getconnections then
