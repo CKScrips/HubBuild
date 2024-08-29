@@ -1,5 +1,5 @@
 local Config = {
-    WindowName = "CkM Hub",
+    WindowName = "CK Hub",
 	Color = Color3.fromRGB(255,128,64),
 	Keybind = Enum.KeyCode.RightControl
 }
@@ -59,7 +59,7 @@ if v.ClassName == "Model" and v:FindFirstChild("ClickDetector") then
 table.insert(shop, v.Name)
 end end 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/GUI/Main.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/GUI/Main.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 
 local Tab1 = Window:CreateTab("Da Hood")
