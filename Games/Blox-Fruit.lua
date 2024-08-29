@@ -1,5 +1,5 @@
 local Config = {
-    WindowName = "CkM Hub",
+    WindowName = "CK Hub",
 	Color = Color3.fromRGB(255,128,64),
 	Keybind = Enum.KeyCode.RightControl
 }
@@ -232,7 +232,7 @@ local function GetClosestMobRep()
     return Target
 end
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/GUI/Main.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/GUI/Main.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 
 local Tab1 = Window:CreateTab("Blox Fruits")
@@ -269,7 +269,7 @@ local Colorpicker3 = Section1:CreateColorpicker("Circle Color", function(Color)
 end)
 
 
-local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/GUI/Main.lua"))()
+local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/GUI/Main.lua"))()
 
 local Toggle1 = Section1:CreateToggle("Player Esp", nil, function(State)
     ESP:Toggle(State)
