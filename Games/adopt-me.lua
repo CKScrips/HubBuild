@@ -135,7 +135,7 @@ local Obbys = {
     "tinyisles"
 }
  
-local RetardedBullShit = {
+local OtherStuff = {
     "CashRegister",
     "GoldenCashRegister"
 }
@@ -494,12 +494,12 @@ local a = {
 }
  
  
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/Main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/Main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/InterfaceManager.lua"))()
  
 local Window = Fluent:CreateWindow({
-    Title = "CkM Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
+    Title = "CK Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
     SubTitle = "",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -518,8 +518,8 @@ local Options = Fluent.Options
  
 do
     Fluent:Notify({
-        Title = "CkM Hub",
-        Content = "Congrats, you're using CkM Hub " .. Verison,
+        Title = "CK Hub",
+        Content = "Congrats, you're using CK Hub " .. Verison,
         SubContent = "Have fun!", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
@@ -708,7 +708,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("DekuDimz")
+    Dropdown:SetValue("")
  
     Dropdown:OnChanged(function(Value)
         sp = Value
@@ -752,7 +752,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("CkM")
+    Dropdown:SetValue("")
  
     Dropdown:OnChanged(function(Value)
         Petsc = Value
@@ -794,7 +794,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("CkM")
+    Dropdown:SetValue("")
  
     Dropdown:OnChanged(function(Value)
         Egg = Value
@@ -818,7 +818,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("CkM")
+    Dropdown:SetValue("")
  
     Dropdown:OnChanged(function(Value)
         Gift = Value
@@ -959,7 +959,7 @@ do
         Default = 1,
     })
  
-    Dropdown:SetValue("CkM")
+    Dropdown:SetValue("")
  
     Dropdown:OnChanged(function(Value)
         Playt = Value
@@ -1023,7 +1023,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
  
 Fluent:Notify({
-    Title = "CkM Hub",
+    Title = "CK Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
