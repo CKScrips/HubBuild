@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/Global.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Extras/Global.lua"))()
 VG.DisableConnection(Error)
 VG.DisableConnection(Idled)
 local OldNameCall = nil
@@ -147,9 +147,9 @@ spawn(function()
     end
 end)
 
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/Main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/Main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "CkM Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
@@ -230,7 +230,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "CkM Hub",
+    Title = "CK Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
