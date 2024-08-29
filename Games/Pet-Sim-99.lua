@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Extras/Global.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Extras/Global.lua"))()
 VG.DisableConnection(Error)
 VG.DisableConnection(Idled)
 
@@ -500,13 +500,13 @@ RunService.Stepped:Connect(function()
     end
 end)
 
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/Main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CkMScripts/HubBuild/main/Fluent/InterfaceManager.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/Main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CKScrips/HubBuild/main/Fluent/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "V.G Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
-    SubTitle = "by DekuDimz",
+    Title = "CK Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
+    SubTitle = "by CKScrips",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -524,8 +524,8 @@ local Tabs = {
 local Options = Fluent.Options
 do
     Fluent:Notify({
-        Title = "V.G Hub Loaded",
-        Content = "Congrats your using V.G Hub " .. Verison,
+        Title = "CK Hub Loaded",
+        Content = "Congrats you're using CK Hub " .. Verison,
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
@@ -755,7 +755,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
  
 Fluent:Notify({
-    Title = "CkM Hub",
+    Title = "CK Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
